@@ -29,6 +29,7 @@
                 *ngIf="!email.valid && email.touched" >Please enter a valid value!</span>
           </div>
         </div>
+
         <div class="form-group">
           <label for="secret">Secret Questions</label>
           <select
@@ -40,6 +41,14 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+        <div class="form-group">
+          <textarea
+            name="questionAnswer"
+            rows="3"
+            class="form-control"
+            [(ngModel)]="answer"></textarea>
+        </div>
+        <p>Your reply: {{ answer }}</p>
         <button
           class="btn btn-primary"
           type="submit"
